@@ -11,4 +11,4 @@ FROM {{ source('my_project', 'employee') }}
 
 {% if is_incremental() %}
     WHERE EmployeeID > (SELECT MAX(EmployeeID) FROM {{ this }})
-{% endif %}
+{% endif %} 
