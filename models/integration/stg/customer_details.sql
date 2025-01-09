@@ -1,6 +1,6 @@
 {{
     config(
-        materialized="view",
+        materialized="table",
         alias="customer_details",
         schema="STG"
     )
