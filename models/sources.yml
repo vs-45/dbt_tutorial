@@ -9,7 +9,7 @@ sources:
       - name: customer
       - name: region
       - name: orders
-      - name: employee
+      - name: Employee
 
   - name: stripe
     tables:
