@@ -12,4 +12,4 @@ from {{ source('my_project', 'employee') }}
 {% if is_incremental() %}
   -- this filter will only be applied on incremental runs
   AND EmployeeID > (SELECT MAX(EmployeeID) FROM {{ this }}) 
-{% endif %}
+{% endif %} 
