@@ -1,8 +1,8 @@
 {{ config(transient=false, materialized="table", dist="CUSTOMER_ID") }}
 with
-    customers as (select * from {{ ref("stg_customers") }}),
+    customers as (select * from {{ ref("source_customers") }}),
 
-    orders as (select * from {{ ref("stg_orders") }}),
+    orders as (select * from {{ ref("source_orders") }}),
 
     customer_orders as (
 

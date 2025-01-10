@@ -1,10 +1,10 @@
 version: 2
 
 models:
-  - name: customers
+  - name: stg_customers
     tests:
           - cust_test
-  - name: customers
+  - name: stg_customers
     description: One record per customer
     columns:
       - name: customer_id
@@ -15,7 +15,7 @@ models:
       - name: first_order_date
         description: NULL when a customer has not yet placed an order.
 
-  - name: stg_customers
+  - name: source_customers
     description: This model cleans up customer data
     columns:
       - name: customer_id
@@ -24,7 +24,7 @@ models:
           - unique
           - not_null
 
-  - name: stg_orders
+  - name: source_orders
     description: This model cleans up order data
     columns:
       - name: order_id
@@ -40,5 +40,5 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('stg_customers')
+              to: ref('source_customers')
               field: customer_id
