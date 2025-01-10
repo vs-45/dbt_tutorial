@@ -1,11 +1,10 @@
 {{ config(
     materialized='incremental',
     unique_key='unique_id',
-    incremental_strategy='delete+insert',
+    incremental_strategy='merge',
 ) }}
 
 SELECT 
-    dbt_utils.generate_uuid() as unique_id,
     EmployeeID,
     Name, 
     Salary
