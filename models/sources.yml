@@ -11,4 +11,6 @@ sources:
           - name: orders
             description: One record per order. Includes cancelled and deleted orders.
           - name: incr_source_1
+          - name: incr_source_2
+          - name: incr_source_3
             
