@@ -7,4 +7,4 @@
     )  
         }}
 
-select * from {{ source('raw', 'incr_source_1') }}
+select * from {{ source('jaffle_shop', 'incr_source_1') }}
