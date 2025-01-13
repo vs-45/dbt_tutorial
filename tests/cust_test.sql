@@ -1,3 +1,3 @@
 SELECT *
-FROM {{ ref('customers') }}
+FROM {{ ref('source_customers') }}
 WHERE CUSTOMER_ID < 1
