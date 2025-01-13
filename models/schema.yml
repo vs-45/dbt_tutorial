@@ -4,7 +4,6 @@ models:
   - name: stg_customers
     tests:
           - cust_test
-  - name: stg_customers
     description: One record per customer
     columns:
       - name: customer_id

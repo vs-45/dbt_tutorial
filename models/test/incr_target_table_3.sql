@@ -17,3 +17,9 @@ WITH source_data AS (
 
 SELECT *
 FROM source_data
+
+{% if is_incremental() %}
+
+where id > (select max(id) from {{this}})
+
+{% endif %}
